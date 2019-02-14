@@ -1,106 +1,283 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=360, initial-scale=1" />
-    <title></title>
+    <meta charset="utf-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <meta name="description" content="" />
+
+    <meta name="author" content="" />
+
+    <title>Album example for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Lobster"
     />
+
     <link rel="stylesheet" href="main.css" />
   </head>
 
   <body>
-    <main class="main-container">
-      <section class="section">
-        <h2 class="text-center">Products</h2>
-        <div class="products">
-          <!--
-					https://www.iconfinder.com/iconsets/beverage
-					Creative Commons (Attribution 3.0 Unported)
-					https://creativemarket.com/eucalyp
-				-->
-          <div class="product">
-            <img
-              class="product__image"
-              src="img/products/beer.svg"
-              alt="Beer"
-            />
-            <h2 class="product__name">Beer</h2>
-            <h3 class="product__price">6.00</h3>
-            <button class="btn btn--primary" data-action="ADD_TO_CART">
-              Add To Cart
-            </button>
-          </div>
-          <div class="product">
-            <img
-              class="product__image"
-              src="img/products/energy-drink.svg"
-              alt="Energy Drink"
-            />
-            <h2 class="product__name">Energy Drink</h2>
-            <h3 class="product__price">5.00</h3>
-            <button class="btn btn--primary" data-action="ADD_TO_CART">
-              Add To Cart
-            </button>
-          </div>
-          <div class="product">
-            <img
-              class="product__image"
-              src="img/products/juice.svg"
-              alt="Juice"
-            />
-            <h2 class="product__name">Juice</h2>
-            <h3 class="product__price">4.00</h3>
-            <button class="btn btn--primary" data-action="ADD_TO_CART">
-              Add To Cart
-            </button>
-          </div>
-          <div class="product">
-            <img
-              class="product__image"
-              src="img/products/milk.svg"
-              alt="Milk"
-            />
-            <h2 class="product__name">Milk</h2>
-            <h3 class="product__price">2.50</h3>
-            <button class="btn btn--primary" data-action="ADD_TO_CART">
-              Add To Cart
-            </button>
-          </div>
-          <div class="product">
-            <img
-              class="product__image"
-              src="img/products/mineral-water.svg"
-              alt="Mineral Water"
-            />
-            <h2 class="product__name">Mineral Water</h2>
-            <h3 class="product__price">1.00</h3>
-            <button class="btn btn--primary" data-action="ADD_TO_CART">
-              Add To Cart
-            </button>
-          </div>
-          <div class="product">
-            <img
-              class="product__image"
-              src="img/products/smoothie.svg"
-              alt="Smoothie"
-            />
-            <h2 class="product__name">Smoothie</h2>
-            <h3 class="product__price">6.00</h3>
-            <button class="btn btn--primary" data-action="ADD_TO_CART">
-              Add To Cart
-            </button>
+    <header>
+      <div class="collapse bg-dark" id="navbarHeader">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-8 col-md-7 py-4">
+              <h4 class="text-white">About</h4>
+
+              <p class="text-muted">
+                <strong
+                  >A shopping cart made on vanillaJS(ES6) by using browser as
+                  internel storage. The user can add items into the cart, edit
+                  the quantity of items in the cart and can also delete the
+                  whole cart. There is also a payment option and the user can
+                  choose to pay for the items by using paypal. Also, the user
+                  interface is fully responsive i.e.can be seen on screens of
+                  different sizes, for example: Laptops,tablets and mobiles.
+                </strong>
+              </p>
+            </div>
+
+            <div class="col-sm-4 offset-md-1 py-4">
+              <h4 class="text-white">Contact</h4>
+              <h5 class="text-white">Syed Zeeshan Haider</h5>
+
+              <ul class="list-unstyled">
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/zeeshan-haider-ba8310163/"
+                    class="text-white"
+                    >LinkedIn</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="https://zeeshanhaider2.github.io/hyf-html-css/Syed_Zeeshan_Haider_-_CV3a.pdf"
+                    class="text-white"
+                    >CV</a
+                  >
+                </li>
+
+                <li>
+                  <a
+                    href="https://zeeshanhaider2.github.io/hyf-html-css/Week3/index.html"
+                    class="text-white"
+                    >Portfolio</a
+                  >
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
 
-      <section class="section">
-        <h2 class="text-center">Cart</h2>
-        <div class="cart"></div>
+      <div class="navbar navbar-dark bg-dark box-shadow">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center">
+            <!-- <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="mr-2"
+            >
+              <path
+                d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"
+              ></path>
+              <circle cx="12" cy="13" r="4"></circle>
+            </svg> -->
+            <img
+              src="img/products/shopping-cart.png"
+              alt="shopping-cart"
+            />&ensp;
+            <strong>Shopping Cart</strong>
+          </a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarHeader"
+            aria-controls="navbarHeader"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main role="main">
+      <div class="album py-5 bg-light">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <div class="product">
+                  <img
+                    class="product__image"
+                    src="img/products/juice.svg"
+                    alt="Juice"
+                  />
+                  <h2 class="product__name">Juice</h2>
+                  <h3 class="product__price">4.00</h3>
+                  <button class="btn btn-primary" data-action="ADD_TO_CART">
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <div class="product">
+                  <img
+                    class="product__image"
+                    src="img/products/milk.svg"
+                    alt="Milk"
+                  />
+                  <h2 class="product__name">Milk</h2>
+                  <h3 class="product__price">2.50</h3>
+                  <button class="btn btn-primary" data-action="ADD_TO_CART">
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <div class="product">
+                  <img
+                    class="product__image"
+                    src="img/products/beer.svg"
+                    alt="Beer"
+                  />
+                  <h2 class="product__name">Beer</h2>
+                  <h3 class="product__price">6.00</h3>
+                  <button class="btn btn-primary" data-action="ADD_TO_CART">
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <div class="product">
+                  <img
+                    class="product__image"
+                    src="img/products/smoothie.svg"
+                    alt="Smoothie"
+                  />
+                  <h2 class="product__name">Smoothie</h2>
+                  <h3 class="product__price">6.00</h3>
+                  <button class="btn btn-primary" data-action="ADD_TO_CART">
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <div class="product">
+                  <img
+                    class="product__image"
+                    src="img/products/mineral-water.svg"
+                    alt="Mineral Water"
+                  />
+                  <h2 class="product__name">Mineral Water</h2>
+                  <h3 class="product__price">1.00</h3>
+                  <button class="btn btn-primary" data-action="ADD_TO_CART">
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <div class="product">
+                  <img
+                    class="product__image"
+                    src="img/products/energy-drink.svg"
+                    alt="Energy Drink"
+                  />
+                  <h2 class="product__name">Energy Drink</h2>
+                  <h3 class="product__price">5.00</h3>
+                  <button class="btn btn-primary" data-action="ADD_TO_CART">
+                    Add To Cart
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="jumbotron m-0 text-center">
+        <div class="container">
+          <h1 class="jumbotron-heading"></h1>
+          <img src="img/products/shopping-cart.png" alt="shopping-cart" />
+
+          <p class="lead text-muted"></p>
+          <section class="section">
+            <h2 class="text-center"></h2>
+            <div class="cart"></div>
+          </section>
+        </div>
       </section>
     </main>
+
+    <footer class="text-muted">
+      <div class="container py-4">
+        <p class="float-right">
+          <a href="#">Back to top</a>
+        </p>
+
+        <p>
+          Album example is &copy; Bootstrap, but please download and customize
+          it for yourself!
+        </p>
+
+        <p>
+          New to Bootstrap? <a href="../../">Visit the homepage</a> or read our
+          <a href="../../getting-started/">getting started guide</a>.
+        </p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+
+    ================================================== -->
+
+    <!-- Placed at the end of the document so the pages load faster -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
 
     <script src="main.js"></script>
   </body>
